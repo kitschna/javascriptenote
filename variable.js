@@ -12,10 +12,10 @@
 let globalName = 'global name'
 
 {
-    let name = 'Raf';
-    console.log(name)
-    name = 'hello';
-    console.log('name')
+  let name = 'Raf';
+  console.log(name)
+  name = 'hello';
+  console.log('name')
 }
 
 console.log(name)

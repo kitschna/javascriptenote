@@ -1,4 +1,5 @@
 'use strict';
+
 // Object-oriendted programming
 // class : template
 // object : instance of a class
@@ -8,17 +9,17 @@
 
 // 1. Class declarations
 class Person {
-    //onstructor
-    constructor(name, age){
-        //fields
-        this.name = name;
-        this.age = age;
-    }
+  //constructor
+  constructor(name, age){
+      //fields
+      this.name = name;
+      this.age = age;
+  }
     
-    // methods
-    speak(){
-        console.log(`${this.name} : hello!`)
-    }
+  // methods
+  speak(){
+      console.log(`${this.name} : hello!`)
+  }
 }
 
 const ellie = new Person('ellie', 20)
@@ -28,22 +29,22 @@ ellie.speak()
 
 // 2. Getter and setters
 class User {
-    constructor(firstName, lastName, age){
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.age = age;
-    }
+  constructor(firstName, lastName, age){
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age;
+  }
 
-    get age() {
-        return this._age;
-    }
+  get age() {
+    return this._age;
+  }
 
-    set age(value) {
-        // if (value < 0){
-        //     throw Error('age can not be negative')
-        // }
-        this._age = value < 0 ? 0 : value
-    }
+  set age(value) {
+   // if (value < 0){
+    //     throw Error('age can not be negative')
+    // }
+    this._age = value < 0 ? 0 : value
+  }
 }
 
 const user1 = new User('Steve', 'Job', -1)
@@ -53,8 +54,8 @@ console.log(user1.age)
 // Too soon!
 // MDN에서 찾아보기
 class Experiment {
-    publicField = 2; 
-    #privatedField = 0; // class 안에서만 쓸 수 있음
+  publicField = 2; 
+  #privatedField = 0; // class 안에서만 쓸 수 있음
 }
 const experiment = new Experiment();
 console.log(experiment.publicField)
@@ -63,13 +64,13 @@ console.log(experiment.privatedFiled)
 // 4. Static properties and methods
 // Too soon!
 class Article {
-    static publisher = 'Dream Coding';
-    constructor(articleNumber){
-        this.articleNumber = articleNumber;
-    }
-    static printPublisher(){
-        console.log(Article.publisher)
-    }
+  static publisher = 'Dream Coding';
+  constructor(articleNumber){
+    this.articleNumber = articleNumber;
+  }
+  static printPublisher(){
+    console.log(Article.publisher)
+  }
 }
 const article1 = new Article(1);
 const article2 = new Article(2);
@@ -80,34 +81,34 @@ Article.printPublisher();
 // 5. Inheritance
 // a way for one class to extend another class.
 class Shape {
-    constructor(width, height, color){
-        this.width = width;
-        this.height = height;
-        this.color = color;
-    }
+  constructor(width, height, color){
+    this.width = width;
+    this.height = height;
+    this.color = color;
+}
 
-    draw() {
-        console.log(`drawing ${this.color} color!`);
-    }
+  draw() {
+    console.log(`drawing ${this.color} color!`);
+  }
     
-    getArea() { 
-        return this.width * this.height
-    }
+  getArea() { 
+    return this.width * this.height
+  }
 }
 
 class Rectangle extends Shape {}
 class Triangle extends Shape { // over writing 가능
-    draw(){
-        super.draw() // over writing 하면 기존의 함수는 지워지지만, 이렇게 super를 써서 부모의 것도 다시 불러올 수 있다.
-        console.log('🔺') 
-    }
-    getArea() {
-        return (this.width * this.height) /2
-    }
+  draw(){
+    super.draw() // over writing 하면 기존의 함수는 지워지지만, 이렇게 super를 써서 부모의 것도 다시 불러올 수 있다.
+    console.log('🔺') 
+  }
+  getArea() {
+    return (this.width * this.height) /2
+  }
 
-    toString() {
-        return `Triangle color : ${this.color}`
-    }
+  toString() {
+    return `Triangle color : ${this.color}`
+  }
 }
 const rectangle = new Rectangle(20, 20, 'blue')
 rectangle.draw()

@@ -55,10 +55,10 @@ console.log(`or : ${value1 || value2 || check()}`); // 함수등은 제일 뒤�
 // 만약 위에서 value1이 true였다면 check는 실행 하지도 않음. 이 포인트가 중요.
 
 function check() {
-    for(let i = 0; i < 10; i++){
-        //wasting time
-        console.log("🥰")
-    }
+  for(let i = 0; i < 10; i++){
+    //wasting time
+    console.log("🥰")
+  }
     return true;
 }
 
@@ -70,15 +70,15 @@ console.log(`and : ${value1 && value2 && check()}`); // and 역시 heavy한 oper
 // nullableObject && nullableObject.something
 let nullableObject = null
 if (nullableObject != null){
-    nullableObject.something;
+  nullableObject.something;
 }
 
 function check() {
-    for(let i = 0; i < 10; i++){
-        //wasting time
-        console.log("🥰")
-    }
-    return true;
+  for(let i = 0; i < 10; i++){
+    //wasting time
+    console.log("🥰")
+  }
+  return true;
 }
 
 // ! (not)
@@ -121,11 +121,11 @@ console.log(null === undefined) // 역시 boolean 타입은 아니다.
 // if, else if, else
 const name ='Raf';
 if (name === 'Raf'){
-    console.log('Welcome, Raf!')
+  console.log('Welcome, Raf!')
 } else if (name === 'coder') {
-    console.log('You are amaing coder')
+  console.log('You are amaing coder')
 } else {
-    console.log('unkown')
+  console.log('unkown')
 }
 
 // 9. Ternary operator : ?
@@ -139,16 +139,16 @@ console.log(name === 'ellie' ? 'yes' : 'no')
 
 const browser = 'IE';
 switch (browser){
-    case 'IE' :
-        console.log('go away!')
-        break;
-    case 'Chrome' :
-    case 'Firefox' :
-        console.log('I love you!');
-        break;
-    default :
-            console.log('same all!')
-        break;
+  case 'IE' :
+    console.log('go away!')
+    break;
+  case 'Chrome' :
+  case 'Firefox' :
+    console.log('I love you!');
+    break;
+  default :
+    console.log('same all!')
+    break;
 }
 
 
@@ -179,9 +179,9 @@ for (i = 3; i > 0; i--){
 
 // nested loops
 for (let i = 0; i < 3; i++){
-    for(let j = 0; j < 3; j++){
-        console.log(`i: ${i}, j:${j}`)
-    }
+ for(let j = 0; j < 3; j++){
+  console.log(`i: ${i}, j:${j}`)
+ }
 }
 
 // break, continue
