@@ -3,7 +3,7 @@
 // a collection of related data and/or functionality.
 // Nearly all objects in JavaScript are instances of Object.
 // object = { key : value };
-
+'use strict'
 // 1. Literals and properties
 const name = 'ellie';
 const age = 4;
@@ -113,8 +113,9 @@ const user2 = user
 user2.name = 'coder';
 console.log(user) 
 // 여기서 user의 name은 'coder'로 바뀌었음. 
-//그 이유는 user2의 레퍼런스는 user의 레퍼런스와 같은 자료를 가르키고 있기 때문
+// 그 이유는 user2의 레퍼런스는 user의 레퍼런스와 같은 자료를 가르키고 있기 때문
 // 그렇다면 자료를 그대로 복사해 보자. 아래
+// (delete를 사용해서 바로 자료를 지울 수도 있음)
 
 // old way
 const user3 = {};

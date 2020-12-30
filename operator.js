@@ -1,4 +1,6 @@
- // 1. Stirng concatenation
+'use strict'
+
+// 1. Stirng concatenation
  console.log('my' + 'cat');
  console.log('1' + 2);
  console.log(`string literals: 
