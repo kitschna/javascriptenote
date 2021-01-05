@@ -22,7 +22,7 @@ printImmediately(() => console.log('hello'))
 
 // Asynchronous callback
 function printWithDelay(print, timeout){ 
-  // printWithDelay 는 wrapping 함수
+// printWithDelay 는 wrapping 함수
   setTimeout(print, timeout); // setTimeout은 callback함수
 }
  
