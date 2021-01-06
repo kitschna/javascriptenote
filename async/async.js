@@ -38,25 +38,30 @@ function getBanana2() {
 	.then(() => '🍌')
 }
 
+async function getKiwi() {
+	await delay(1000);
+	return '🥝';
+}
+
 // function pickFruits() {
 // 	return getApple().then(apple => {
 // 		return getBanana().then(banana => `${apple} + ${banana}`)
 // 	})
 // }
 
-async function pickFruits() {
-	const apple = await getApple();
-	const banana = await getBanana();
-	return `${apple} + ${banana}`
-} 
-
 // async function pickFruits() {
-// 	const applePromise = getApple()
-// 	const bananaPromise = getBanana()
-// 	const apple = await applePromise
-// 	const banana = await bananaPromise
+// 	const apple = await getApple();
+// 	const banana = await getBanana();
 // 	return `${apple} + ${banana}`
 // } 
+
+async function pickFruits() {
+	const applePromise = getApple()
+	const bananaPromise = getBanana()
+	const apple = await applePromise
+	const banana = await bananaPromise
+	return `${apple} + ${banana}`
+} 
 
 
 
@@ -74,3 +79,9 @@ function pickAllFruits() {
 }
 
 pickAllFruits().then(console.log);
+
+function pickOnlyOne() {
+	return Promise.race([getKiwi(), getBanana(),getApple()]);
+}
+
+pickOnlyOne().then(console.log)
